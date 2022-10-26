@@ -1,1 +1,1 @@
-# button for UI construction course CS-E5220
+# Button for Assignment 2 in UI construction course CS-E5220

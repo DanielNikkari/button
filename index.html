@@ -5,11 +5,16 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <h1>Daniel Nikkari's button</h1>
     <button class="custom-button" onclick="handleClick()">Click me</button>
   </body>
   <script>
     const handleClick = () => {
-      window.alert("button clicked")
+      const newDiv = document.createElement("div")
+      const newElem = document.createTextNode("the assignment has been completed")
+      newDiv.appendChild(newElem)
+      const currentDiv = document.getElementById("div1");
+      document.body.insertBefore(newDiv, currentDiv);
     }
   </script>
 </html>

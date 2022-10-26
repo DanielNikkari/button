@@ -1,0 +1,71 @@
+body {
+  background-color: #121212;
+}
+
+h1 {
+  color: springgreen;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 6rem;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 2rem;
+  width: 200px;
+  height: 35px;
+  padding: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  background: white;
+}
+
+button:hover {
+  background: aqua;
+  border-radius: 10px;
+  scale: 1.1;
+}
+
+div {
+  position: absolute;
+  background-color: green;
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translatex(-50%);
+  top: 1rem;
+  animation: notfication-slide 3050ms  ease-in-out;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes notfication-slide {
+  0%{
+    opacity: 0;
+    top: 0;
+  }
+  2%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+    top: 2rem;
+  }
+  80%{
+    opacity: 1;
+    top: 2rem;
+  }
+  98% {opacity: 1;}
+  100%{
+    opacity: 1;
+    top: 1rem;
+  }
+}

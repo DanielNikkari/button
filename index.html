@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Daniel Nikkari's button</h1>
-    <button class="custom-button" onclick="handleClick()">Click me</button>
+    <button id="custom-button" onclick="handleClick()">Click me</button>
   </body>
   <script>
     const handleClick = () => {
@@ -15,7 +15,14 @@
       newDiv.appendChild(newElem)
       const currentDiv = document.getElementById("div1");
       document.body.insertBefore(newDiv, currentDiv);
-      delay(3050).then(() => newDiv.remove());
+      const button = document.getElementById("custom-button");
+      button.className = 'clicked';
+      delay(200).then(() => {
+        button.classList.remove("clicked");
+      })
+      delay(3050).then(() => {
+        newDiv.remove();
+      }); 
     }
     function delay(time) {
       return new Promise(resolve => setTimeout(resolve, time));

@@ -22,12 +22,32 @@ button {
   font-weight: 700;
   font-size: 14px;
   background: white;
+  border-radius: 10px;
 }
 
 button:hover {
-  background: aqua;
+  background: rgb(225, 225, 225);
   border-radius: 10px;
   scale: 1.1;
+}
+
+.clicked {
+  animation: click-animation 200ms ease-in-out;
+}
+
+@keyframes click-animation {
+  0% {
+    scale: 1.1;
+    border-radius: 10px;
+  }
+  50% {
+    scale: 1;
+    border-radius: 15px;
+  }
+  100%{
+    scale: 1.1;
+    border-radius: 10px;
+  }
 }
 
 div {
